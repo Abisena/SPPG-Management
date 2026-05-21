@@ -1,0 +1,81 @@
+{
+ "name": "SPPG Master Menu MBG Workflow",
+ "doctype": "Workflow",
+ "document_type": "Master Menu MBG",
+ "workflow_name": "SPPG Master Menu MBG Workflow",
+ "is_active": 1,
+ "send_email_alert": 0,
+ "states": [
+  {
+   "state": "Draft",
+   "doc_status": "0",
+   "style": "Primary",
+   "is_optional_state": 0,
+   "allow_edit": "Ahli Gizi"
+  },
+  {
+   "state": "Review Ahli Gizi",
+   "doc_status": "0",
+   "style": "Warning",
+   "is_optional_state": 0,
+   "allow_edit": "Ahli Gizi"
+  },
+  {
+   "state": "Disetujui",
+   "doc_status": "0",
+   "style": "Info",
+   "is_optional_state": 0,
+   "allow_edit": "SPPG Manager"
+  },
+  {
+   "state": "Aktif",
+   "doc_status": "0",
+   "style": "Success",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Tidak Aktif",
+   "doc_status": "0",
+   "style": "Danger",
+   "is_optional_state": 0
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Draft",
+   "action": "Submit Review",
+   "next_state": "Review Ahli Gizi",
+   "allowed": "Admin SPPG"
+  },
+  {
+   "state": "Review Ahli Gizi",
+   "action": "Setujui",
+   "next_state": "Disetujui",
+   "allowed": "Ahli Gizi"
+  },
+  {
+   "state": "Review Ahli Gizi",
+   "action": "Revisi",
+   "next_state": "Draft",
+   "allowed": "Ahli Gizi"
+  },
+  {
+   "state": "Disetujui",
+   "action": "Aktifkan",
+   "next_state": "Aktif",
+   "allowed": "SPPG Manager"
+  },
+  {
+   "state": "Aktif",
+   "action": "Non-Aktifkan",
+   "next_state": "Tidak Aktif",
+   "allowed": "SPPG Manager"
+  },
+  {
+   "state": "Tidak Aktif",
+   "action": "Reaktifkan",
+   "next_state": "Aktif",
+   "allowed": "SPPG Manager"
+  }
+ ]
+}

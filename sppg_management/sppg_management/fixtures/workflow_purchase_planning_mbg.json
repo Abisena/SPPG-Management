@@ -1,0 +1,72 @@
+{
+ "name": "SPPG Purchase Planning MBG Workflow",
+ "doctype": "Workflow",
+ "document_type": "Purchase Planning MBG",
+ "workflow_name": "SPPG Purchase Planning MBG Workflow",
+ "is_active": 1,
+ "send_email_alert": 0,
+ "states": [
+  {
+   "state": "Draft",
+   "doc_status": "0",
+   "style": "Primary",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Diajukan",
+   "doc_status": "0",
+   "style": "Warning",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Disetujui",
+   "doc_status": "0",
+   "style": "Success",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Purchase Order Dibuat",
+   "doc_status": "0",
+   "style": "Info",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Selesai",
+   "doc_status": "0",
+   "style": "Success",
+   "is_optional_state": 0
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Draft",
+   "action": "Ajukan",
+   "next_state": "Diajukan",
+   "allowed": "Purchasing SPPG"
+  },
+  {
+   "state": "Diajukan",
+   "action": "Setujui",
+   "next_state": "Disetujui",
+   "allowed": "SPPG Manager"
+  },
+  {
+   "state": "Diajukan",
+   "action": "Tolak",
+   "next_state": "Draft",
+   "allowed": "SPPG Manager"
+  },
+  {
+   "state": "Disetujui",
+   "action": "Buat PO",
+   "next_state": "Purchase Order Dibuat",
+   "allowed": "Purchasing SPPG"
+  },
+  {
+   "state": "Purchase Order Dibuat",
+   "action": "Selesai",
+   "next_state": "Selesai",
+   "allowed": "Purchasing SPPG"
+  }
+ ]
+}

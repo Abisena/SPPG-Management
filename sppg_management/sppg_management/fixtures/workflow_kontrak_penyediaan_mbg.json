@@ -1,0 +1,87 @@
+{
+ "name": "SPPG Kontrak Penyediaan MBG Workflow",
+ "doctype": "Workflow",
+ "document_type": "Kontrak Penyediaan MBG",
+ "workflow_name": "SPPG Kontrak Penyediaan MBG Workflow",
+ "is_active": 1,
+ "send_email_alert": 0,
+ "states": [
+  {
+   "state": "Draft",
+   "doc_status": "0",
+   "style": "Primary",
+   "is_optional_state": 0,
+   "allow_edit": "Admin SPPG"
+  },
+  {
+   "state": "Diajukan",
+   "doc_status": "0",
+   "style": "Warning",
+   "is_optional_state": 0,
+   "allow_edit": "SPPG Manager"
+  },
+  {
+   "state": "Dikonfirmasi",
+   "doc_status": "0",
+   "style": "Info",
+   "is_optional_state": 0,
+   "allow_edit": "SPPG Owner"
+  },
+  {
+   "state": "Kontrak Berjalan",
+   "doc_status": "0",
+   "style": "Success",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Selesai Kontrak",
+   "doc_status": "0",
+   "style": "Success",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Dibatalkan",
+   "doc_status": "0",
+   "style": "Danger",
+   "is_optional_state": 0
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Draft",
+   "action": "Ajukan",
+   "next_state": "Diajukan",
+   "allowed": "Admin SPPG"
+  },
+  {
+   "state": "Diajukan",
+   "action": "Konfirmasi",
+   "next_state": "Dikonfirmasi",
+   "allowed": "SPPG Manager"
+  },
+  {
+   "state": "Diajukan",
+   "action": "Tolak",
+   "next_state": "Draft",
+   "allowed": "SPPG Manager"
+  },
+  {
+   "state": "Dikonfirmasi",
+   "action": "Aktifkan",
+   "next_state": "Kontrak Berjalan",
+   "allowed": "SPPG Owner"
+  },
+  {
+   "state": "Dikonfirmasi",
+   "action": "Batalkan",
+   "next_state": "Dibatalkan",
+   "allowed": "SPPG Owner"
+  },
+  {
+   "state": "Kontrak Berjalan",
+   "action": "Selesaikan",
+   "next_state": "Selesai Kontrak",
+   "allowed": "SPPG Manager"
+  }
+ ]
+}

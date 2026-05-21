@@ -1,0 +1,2 @@
+include requirements.txt
+recursive-include sppg_management *.json *.js *.css *.html *.py *.txt *.md

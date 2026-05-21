@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "autoname": "VHL-.#####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_name",
+  "plate_number",
+  "col_break_140584",
+  "vehicle_type",
+  "capacity_portion",
+  "col_break_140584",
+  "sppg_unit",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle_name",
+   "fieldtype": "Data",
+   "label": "Nama Kendaraan",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "plate_number",
+   "fieldtype": "Data",
+   "label": "No. Polisi",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "label": "Tipe",
+   "options": "Motor\nMobil Pick-Up\nMobil Box\nMotor Box"
+  },
+  {
+   "fieldname": "capacity_portion",
+   "fieldtype": "Int",
+   "label": "Kapasitas Muat (porsi)"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sppg_unit",
+   "fieldtype": "Link",
+   "label": "SPPG Unit",
+   "options": "SPPG Unit"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Aktif",
+   "default": "1"
+  }
+ ],
+ "is_submittable": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Vehicle",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "vehicle_name"
+}

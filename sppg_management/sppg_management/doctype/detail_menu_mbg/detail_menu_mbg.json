@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "produk",
+  "masakan_name",
+  "kategori",
+  "energy_per_100g",
+  "protein_per_100g",
+  "urutan",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "produk",
+   "fieldtype": "Link",
+   "label": "Produk Masakan",
+   "reqd": 1,
+   "options": "Produk Hasil Masakan",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "masakan_name",
+   "fieldtype": "Data",
+   "label": "Nama Masakan",
+   "fetch_from": "produk.masakan_name",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "kategori",
+   "fieldtype": "Link",
+   "label": "Kategori",
+   "options": "Kategori Produk MBG",
+   "fetch_from": "produk.kategori",
+   "read_only": 1
+  },
+  {
+   "fieldname": "energy_per_100g",
+   "fieldtype": "Float",
+   "label": "Energi/100g (kkal)",
+   "fetch_from": "produk.energy_per_100g",
+   "read_only": 1
+  },
+  {
+   "fieldname": "protein_per_100g",
+   "fieldtype": "Float",
+   "label": "Protein/100g (gr)",
+   "fetch_from": "produk.protein_per_100g",
+   "read_only": 1
+  },
+  {
+   "fieldname": "urutan",
+   "fieldtype": "Int",
+   "label": "Urutan",
+   "default": "1"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  }
+ ],
+ "is_submittable": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Detail Menu MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "title_field": "masakan_name"
+}

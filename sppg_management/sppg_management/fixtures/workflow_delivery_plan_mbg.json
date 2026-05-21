@@ -1,0 +1,84 @@
+{
+ "name": "SPPG Delivery Plan MBG Workflow",
+ "doctype": "Workflow",
+ "document_type": "Delivery Plan MBG",
+ "workflow_name": "SPPG Delivery Plan MBG Workflow",
+ "is_active": 1,
+ "send_email_alert": 0,
+ "states": [
+  {
+   "state": "Draft",
+   "doc_status": "0",
+   "style": "Primary",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Siap Kirim",
+   "doc_status": "0",
+   "style": "Info",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Dalam Perjalanan",
+   "doc_status": "0",
+   "style": "Warning",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Diterima",
+   "doc_status": "0",
+   "style": "Success",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Selesai",
+   "doc_status": "0",
+   "style": "Success",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Bermasalah",
+   "doc_status": "0",
+   "style": "Danger",
+   "is_optional_state": 0
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Draft",
+   "action": "Siapkan",
+   "next_state": "Siap Kirim",
+   "allowed": "Driver Logistik"
+  },
+  {
+   "state": "Siap Kirim",
+   "action": "Berangkat",
+   "next_state": "Dalam Perjalanan",
+   "allowed": "Driver Logistik"
+  },
+  {
+   "state": "Dalam Perjalanan",
+   "action": "Diterima",
+   "next_state": "Diterima",
+   "allowed": "Driver Logistik"
+  },
+  {
+   "state": "Diterima",
+   "action": "Selesaikan",
+   "next_state": "Selesai",
+   "allowed": "Driver Logistik"
+  },
+  {
+   "state": "Dalam Perjalanan",
+   "action": "Laporkan Masalah",
+   "next_state": "Bermasalah",
+   "allowed": "Driver Logistik"
+  },
+  {
+   "state": "Bermasalah",
+   "action": "Selesaikan",
+   "next_state": "Selesai",
+   "allowed": "SPPG Manager"
+  }
+ ]
+}

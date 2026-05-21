@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "autoname": "MENU-.YYYY.-.#####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "menu_name",
+  "sppg_unit",
+  "col_break_140584",
+  "sasaran_penerima",
+  "service_type",
+  "sec_status",
+  "status",
+  "approved_by",
+  "col_break_140584",
+  "approval_date",
+  "sec_menu",
+  "menu_items",
+  "sec_gizi",
+  "total_energy_kcal",
+  "total_protein_g",
+  "col_break_140584",
+  "total_fat_g",
+  "total_carbo_g",
+  "col_break_140584",
+  "total_sodium_mg",
+  "nutrition_status",
+  "sec_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "menu_name",
+   "fieldtype": "Data",
+   "label": "Nama Menu",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sppg_unit",
+   "fieldtype": "Link",
+   "label": "SPPG Unit",
+   "reqd": 1,
+   "options": "SPPG Unit"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sasaran_penerima",
+   "fieldtype": "Link",
+   "label": "Sasaran Penerima",
+   "reqd": 1,
+   "options": "Sasaran Penerima MBG",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "label": "Tipe Layanan",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Makan Pagi\nMakan Siang\nMakan Malam\nSnack"
+  },
+  {
+   "fieldname": "sec_status",
+   "fieldtype": "Section Break",
+   "label": "Status & Approval"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Draft\nReview Ahli Gizi\nDisetujui\nAktif\nTidak Aktif",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Disetujui Oleh",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Tanggal Persetujuan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_menu",
+   "fieldtype": "Section Break",
+   "label": "Detail Menu"
+  },
+  {
+   "fieldname": "menu_items",
+   "fieldtype": "Table",
+   "label": "Produk Masakan",
+   "options": "Detail Menu MBG",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec_gizi",
+   "fieldtype": "Section Break",
+   "label": "Nilai Gizi Total"
+  },
+  {
+   "fieldname": "total_energy_kcal",
+   "fieldtype": "Float",
+   "label": "Total Energi (kkal)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_protein_g",
+   "fieldtype": "Float",
+   "label": "Total Protein (gr)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_fat_g",
+   "fieldtype": "Float",
+   "label": "Total Lemak (gr)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_carbo_g",
+   "fieldtype": "Float",
+   "label": "Total Karbohidrat (gr)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_sodium_mg",
+   "fieldtype": "Float",
+   "label": "Total Natrium (mg)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nutrition_status",
+   "fieldtype": "Select",
+   "label": "Status Gizi",
+   "read_only": 1,
+   "options": "\nSesuai\nKurang\nMelebihi\nPerlu Review Ahli Gizi"
+  },
+  {
+   "fieldname": "sec_notes",
+   "fieldtype": "Section Break",
+   "label": "Catatan"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  }
+ ],
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Master Menu MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "menu_name"
+}

@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "autoname": "SF-.YY.MM.-.####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "menu_plan",
+  "production_date",
+  "col_break_140584",
+  "sppg_unit",
+  "warehouse",
+  "col_break_140584",
+  "status",
+  "sec_detail",
+  "forecast_details",
+  "sec_ref",
+  "purchase_planning"
+ ],
+ "fields": [
+  {
+   "fieldname": "menu_plan",
+   "fieldtype": "Link",
+   "label": "Menu Plan",
+   "reqd": 1,
+   "options": "Menu Plan MBG",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "production_date",
+   "fieldtype": "Date",
+   "label": "Tanggal Produksi",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sppg_unit",
+   "fieldtype": "Link",
+   "label": "SPPG Unit",
+   "options": "SPPG Unit"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "in_list_view": 1,
+   "options": "Draft\nStock Cukup\nStock Kurang\nPurchase Created",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "sec_detail",
+   "fieldtype": "Section Break",
+   "label": "Detail Kebutuhan"
+  },
+  {
+   "fieldname": "forecast_details",
+   "fieldtype": "Table",
+   "label": "Detail Bahan",
+   "options": "Stock Forecast Detail"
+  },
+  {
+   "fieldname": "sec_ref",
+   "fieldtype": "Section Break",
+   "label": "Referensi"
+  },
+  {
+   "fieldname": "purchase_planning",
+   "fieldtype": "Link",
+   "label": "Purchase Planning",
+   "options": "Purchase Planning MBG",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Stock Forecast MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "menu_plan"
+}

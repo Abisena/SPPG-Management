@@ -1,0 +1,68 @@
+[
+ {
+  "doctype": "Role",
+  "name": "SPPG Owner",
+  "role_name": "SPPG Owner",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "SPPG Manager",
+  "role_name": "SPPG Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Admin SPPG",
+  "role_name": "Admin SPPG",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Ahli Gizi",
+  "role_name": "Ahli Gizi",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Kepala Dapur",
+  "role_name": "Kepala Dapur",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Staff Dapur",
+  "role_name": "Staff Dapur",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Staff Gudang",
+  "role_name": "Staff Gudang",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Purchasing SPPG",
+  "role_name": "Purchasing SPPG",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Finance SPPG",
+  "role_name": "Finance SPPG",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Driver Logistik",
+  "role_name": "Driver Logistik",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Quality Control SPPG",
+  "role_name": "Quality Control SPPG",
+  "desk_access": 1
+ }
+]

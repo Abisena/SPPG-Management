@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "urutan",
+  "konsumen",
+  "col_break_140584",
+  "alamat",
+  "jumlah_porsi",
+  "col_break_140584",
+  "target_arrival",
+  "status_titik",
+  "actual_arrival",
+  "catatan"
+ ],
+ "fields": [
+  {
+   "fieldname": "urutan",
+   "fieldtype": "Int",
+   "label": "Urutan",
+   "reqd": 1,
+   "in_list_view": 1,
+   "default": "1"
+  },
+  {
+   "fieldname": "konsumen",
+   "fieldtype": "Link",
+   "label": "Konsumen",
+   "options": "Konsumen MBG",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "alamat",
+   "fieldtype": "Small Text",
+   "label": "Alamat Tujuan"
+  },
+  {
+   "fieldname": "jumlah_porsi",
+   "fieldtype": "Int",
+   "label": "Jumlah Porsi",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_arrival",
+   "fieldtype": "Time",
+   "label": "Jam Target Tiba"
+  },
+  {
+   "fieldname": "status_titik",
+   "fieldtype": "Select",
+   "label": "Status Titik",
+   "in_list_view": 1,
+   "options": "Menunggu\nDalam Perjalanan\nDiterima\nGagal"
+  },
+  {
+   "fieldname": "actual_arrival",
+   "fieldtype": "Time",
+   "label": "Waktu Tiba Aktual"
+  },
+  {
+   "fieldname": "catatan",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  }
+ ],
+ "is_submittable": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Route Delivery",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

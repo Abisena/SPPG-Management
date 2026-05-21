@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "autoname": "KONS-.YYYY.-.#####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "konsumen_name",
+  "konsumen_type",
+  "col_break_140584",
+  "sppg_unit",
+  "status",
+  "sec_loc",
+  "address",
+  "area_distribusi",
+  "col_break_140584",
+  "city",
+  "distance_km",
+  "gps_coordinate",
+  "sec_pic",
+  "pic_name",
+  "pic_phone",
+  "col_break_140584",
+  "pic_email",
+  "pic_jabatan",
+  "sec_erp",
+  "customer",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "konsumen_name",
+   "fieldtype": "Data",
+   "label": "Nama Konsumen",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "konsumen_type",
+   "fieldtype": "Select",
+   "label": "Tipe Konsumen",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Sekolah\nPondok Pesantren\nLembaga Sosial\nInstansi Pemerintah\nLainnya"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sppg_unit",
+   "fieldtype": "Link",
+   "label": "SPPG Unit",
+   "reqd": 1,
+   "options": "SPPG Unit"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "reqd": 1,
+   "options": "Aktif\nNon-Aktif\nProspek",
+   "default": "Aktif",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sec_loc",
+   "fieldtype": "Section Break",
+   "label": "Lokasi"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Alamat",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area_distribusi",
+   "fieldtype": "Link",
+   "label": "Area Distribusi",
+   "options": "Area Distribusi"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "Kota"
+  },
+  {
+   "fieldname": "distance_km",
+   "fieldtype": "Float",
+   "label": "Jarak dari Dapur (km)"
+  },
+  {
+   "fieldname": "gps_coordinate",
+   "fieldtype": "Data",
+   "label": "Koordinat GPS",
+   "description": "Format: lat,lng"
+  },
+  {
+   "fieldname": "sec_pic",
+   "fieldtype": "Section Break",
+   "label": "PIC Konsumen"
+  },
+  {
+   "fieldname": "pic_name",
+   "fieldtype": "Data",
+   "label": "Nama PIC",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pic_phone",
+   "fieldtype": "Data",
+   "label": "Telepon PIC",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pic_email",
+   "fieldtype": "Data",
+   "label": "Email PIC",
+   "options": "Email"
+  },
+  {
+   "fieldname": "pic_jabatan",
+   "fieldtype": "Data",
+   "label": "Jabatan PIC"
+  },
+  {
+   "fieldname": "sec_erp",
+   "fieldtype": "Section Break",
+   "label": "Integrasi ERPNext"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer ERPNext",
+   "options": "Customer",
+   "description": "Link ke Customer di modul Selling ERPNext"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  }
+ ],
+ "is_submittable": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Konsumen MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "konsumen_name"
+}

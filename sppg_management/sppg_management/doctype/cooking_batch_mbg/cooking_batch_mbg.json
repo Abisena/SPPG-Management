@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "autoname": "CB-.YY.MM.-.####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "production_plan",
+  "batch_name",
+  "col_break_140584",
+  "cooked_product",
+  "status",
+  "sec_qty",
+  "qty_plan_kg",
+  "qty_actual_kg",
+  "col_break_140584",
+  "chef",
+  "sec_time",
+  "start_time",
+  "finish_time",
+  "col_break_140584",
+  "cooking_temp_c",
+  "sec_qc",
+  "qc_notes",
+  "sec_bahan",
+  "batch_ingredients"
+ ],
+ "fields": [
+  {
+   "fieldname": "production_plan",
+   "fieldtype": "Link",
+   "label": "Production Plan",
+   "reqd": 1,
+   "options": "Production Plan MBG",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "batch_name",
+   "fieldtype": "Data",
+   "label": "Nama Batch",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cooked_product",
+   "fieldtype": "Link",
+   "label": "Produk Masakan",
+   "reqd": 1,
+   "options": "Produk Hasil Masakan"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Antri\nSedang Masak\nSelesai\nQC Passed\nQC Failed",
+   "default": "Antri"
+  },
+  {
+   "fieldname": "sec_qty",
+   "fieldtype": "Section Break",
+   "label": "Kuantitas"
+  },
+  {
+   "fieldname": "qty_plan_kg",
+   "fieldtype": "Float",
+   "label": "Qty Plan (kg)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qty_actual_kg",
+   "fieldtype": "Float",
+   "label": "Qty Aktual (kg)"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "chef",
+   "fieldtype": "Link",
+   "label": "Chef Pelaksana",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "sec_time",
+   "fieldtype": "Section Break",
+   "label": "Waktu"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Mulai Masak"
+  },
+  {
+   "fieldname": "finish_time",
+   "fieldtype": "Datetime",
+   "label": "Selesai Masak"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cooking_temp_c",
+   "fieldtype": "Float",
+   "label": "Suhu Akhir (°C)",
+   "description": "Suhu internal produk saat selesai masak"
+  },
+  {
+   "fieldname": "sec_qc",
+   "fieldtype": "Section Break",
+   "label": "QC"
+  },
+  {
+   "fieldname": "qc_notes",
+   "fieldtype": "Small Text",
+   "label": "Catatan QC"
+  },
+  {
+   "fieldname": "sec_bahan",
+   "fieldtype": "Section Break",
+   "label": "Bahan Digunakan"
+  },
+  {
+   "fieldname": "batch_ingredients",
+   "fieldtype": "Table",
+   "label": "Detail Bahan",
+   "options": "Detail Batch Produksi"
+  }
+ ],
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Cooking Batch MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "batch_name"
+}

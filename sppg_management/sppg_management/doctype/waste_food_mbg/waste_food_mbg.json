@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "autoname": "WF-.YY.MM.-.####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "production_plan",
+  "waste_date",
+  "col_break_140584",
+  "waste_category",
+  "item_code",
+  "col_break_140584",
+  "qty_kg",
+  "waste_value",
+  "col_break_140584",
+  "sppg_unit",
+  "sec_ket",
+  "cause",
+  "preventive_action"
+ ],
+ "fields": [
+  {
+   "fieldname": "production_plan",
+   "fieldtype": "Link",
+   "label": "Production Plan",
+   "options": "Production Plan MBG",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "waste_date",
+   "fieldtype": "Date",
+   "label": "Tanggal",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "waste_category",
+   "fieldtype": "Select",
+   "label": "Kategori Waste",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Bahan Baku\nProduksi\nPemorsian\nRetur Distribusi\nLainnya"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qty_kg",
+   "fieldtype": "Float",
+   "label": "Qty (kg)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "waste_value",
+   "fieldtype": "Currency",
+   "label": "Nilai Waste"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sppg_unit",
+   "fieldtype": "Link",
+   "label": "SPPG Unit",
+   "options": "SPPG Unit"
+  },
+  {
+   "fieldname": "sec_ket",
+   "fieldtype": "Section Break",
+   "label": "Keterangan"
+  },
+  {
+   "fieldname": "cause",
+   "fieldtype": "Text",
+   "label": "Penyebab"
+  },
+  {
+   "fieldname": "preventive_action",
+   "fieldtype": "Small Text",
+   "label": "Tindakan Pencegahan"
+  }
+ ],
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Waste Food MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "waste_category"
+}

@@ -1,0 +1,72 @@
+{
+ "name": "SPPG Production Plan MBG Workflow",
+ "doctype": "Workflow",
+ "document_type": "Production Plan MBG",
+ "workflow_name": "SPPG Production Plan MBG Workflow",
+ "is_active": 1,
+ "send_email_alert": 0,
+ "states": [
+  {
+   "state": "Menunggu Produksi",
+   "doc_status": "0",
+   "style": "Primary",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Sedang Produksi",
+   "doc_status": "0",
+   "style": "Warning",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Selesai Masak",
+   "doc_status": "0",
+   "style": "Info",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Quality Check",
+   "doc_status": "0",
+   "style": "Warning",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Siap Pemorsian",
+   "doc_status": "0",
+   "style": "Success",
+   "is_optional_state": 0
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Menunggu Produksi",
+   "action": "Mulai",
+   "next_state": "Sedang Produksi",
+   "allowed": "Kepala Dapur"
+  },
+  {
+   "state": "Sedang Produksi",
+   "action": "Selesai Masak",
+   "next_state": "Selesai Masak",
+   "allowed": "Kepala Dapur"
+  },
+  {
+   "state": "Selesai Masak",
+   "action": "QC Check",
+   "next_state": "Quality Check",
+   "allowed": "Quality Control SPPG"
+  },
+  {
+   "state": "Quality Check",
+   "action": "QC Passed",
+   "next_state": "Siap Pemorsian",
+   "allowed": "Quality Control SPPG"
+  },
+  {
+   "state": "Quality Check",
+   "action": "QC Failed",
+   "next_state": "Sedang Produksi",
+   "allowed": "Quality Control SPPG"
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "charts": [],
+ "content": "[{\"id\": \"section_1\", \"type\": \"header\", \"data\": {\"text\": \"SPPG Management\", \"col\": 12}}]",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "Workspace",
+ "extends": null,
+ "hide_custom": 0,
+ "is_hidden": 0,
+ "label": "SPPG Management",
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "SPPG Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-building",
+   "label": "SPPG Unit",
+   "link_to": "SPPG Unit",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-users",
+   "label": "Konsumen MBG",
+   "link_to": "Konsumen MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-child",
+   "label": "Sasaran Penerima MBG",
+   "link_to": "Sasaran Penerima MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-heartbeat",
+   "label": "Angka Kecukupan Gizi",
+   "link_to": "Angka Kecukupan Gizi",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-apple-alt",
+   "label": "Produk MBG",
+   "link_to": "Produk MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-drumstick-bite",
+   "label": "Produk Hasil Masakan",
+   "link_to": "Produk Hasil Masakan",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-balance-scale",
+   "label": "Standar Porsi MBG",
+   "link_to": "Standar Porsi MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-book-open",
+   "label": "Master Menu MBG",
+   "link_to": "Master Menu MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-map-marker-alt",
+   "label": "Area Distribusi",
+   "link_to": "Area Distribusi",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-file-signature",
+   "label": "Kontrak Penyediaan MBG",
+   "link_to": "Kontrak Penyediaan MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-list-ul",
+   "label": "Detail Penerima Manfaat",
+   "link_to": "Detail Penerima Manfaat",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-calendar-alt",
+   "label": "Menu Plan MBG",
+   "link_to": "Menu Plan MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-calendar",
+   "label": "Kalender Menu MBG",
+   "link_to": "Kalender Menu MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-box",
+   "label": "Item",
+   "link_to": "Item",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-warehouse",
+   "label": "Warehouse",
+   "link_to": "Warehouse",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-clipboard",
+   "label": "Material Request",
+   "link_to": "Material Request",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-shopping-cart",
+   "label": "Purchase Order",
+   "link_to": "Purchase Order",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-chart-line",
+   "label": "Stock Forecast MBG",
+   "link_to": "Stock Forecast MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-tasks",
+   "label": "Purchase Planning MBG",
+   "link_to": "Purchase Planning MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-industry",
+   "label": "Production Plan MBG",
+   "link_to": "Production Plan MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-fire",
+   "label": "Cooking Batch MBG",
+   "link_to": "Cooking Batch MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-utensils",
+   "label": "Pemorsian MBG",
+   "link_to": "Pemorsian MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-check-double",
+   "label": "Quality Check MBG",
+   "link_to": "Quality Check MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-trash-alt",
+   "label": "Waste Food MBG",
+   "link_to": "Waste Food MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-route",
+   "label": "Delivery Plan MBG",
+   "link_to": "Delivery Plan MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-camera",
+   "label": "Proof of Delivery",
+   "link_to": "Proof of Delivery",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-exclamation-triangle",
+   "label": "Delivery Issue",
+   "link_to": "Delivery Issue",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-id-card",
+   "label": "Driver",
+   "link_to": "Driver",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-car",
+   "label": "Vehicle",
+   "link_to": "Vehicle",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-coins",
+   "label": "Cost Per Portion MBG",
+   "link_to": "Cost Per Portion MBG",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-receipt",
+   "label": "Purchase Invoice",
+   "link_to": "Purchase Invoice",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-file-invoice-dollar",
+   "label": "Sales Invoice",
+   "link_to": "Sales Invoice",
+   "type": "DocType"
+  },
+  {
+   "color": "#1A5276",
+   "format": "Icon",
+   "icon": "fa fa-credit-card",
+   "label": "Payment Entry",
+   "link_to": "Payment Entry",
+   "type": "DocType"
+  }
+ ],
+ "title": "SPPG Management"
+}

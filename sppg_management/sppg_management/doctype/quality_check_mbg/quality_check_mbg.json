@@ -1,0 +1,183 @@
+{
+ "actions": [],
+ "autoname": "QC-.YY.MM.-.####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "production_plan",
+  "qc_date",
+  "col_break_140584",
+  "qc_officer",
+  "qc_status",
+  "sec_params",
+  "temperature_c",
+  "visual_ok",
+  "col_break_140584",
+  "smell_ok",
+  "texture_ok",
+  "col_break_140584",
+  "taste_ok",
+  "sec_notes",
+  "findings",
+  "recommendation"
+ ],
+ "fields": [
+  {
+   "fieldname": "production_plan",
+   "fieldtype": "Link",
+   "label": "Production Plan",
+   "reqd": 1,
+   "options": "Production Plan MBG",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "qc_date",
+   "fieldtype": "Date",
+   "label": "Tanggal QC",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qc_officer",
+   "fieldtype": "Link",
+   "label": "QC Officer",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "qc_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Draft\nPassed\nFailed\nConditional",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "sec_params",
+   "fieldtype": "Section Break",
+   "label": "Parameter Pengecekan"
+  },
+  {
+   "fieldname": "temperature_c",
+   "fieldtype": "Float",
+   "label": "Suhu (°C)"
+  },
+  {
+   "fieldname": "visual_ok",
+   "fieldtype": "Check",
+   "label": "Visual OK",
+   "default": "1"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "smell_ok",
+   "fieldtype": "Check",
+   "label": "Bau OK",
+   "default": "1"
+  },
+  {
+   "fieldname": "texture_ok",
+   "fieldtype": "Check",
+   "label": "Tekstur OK",
+   "default": "1"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "taste_ok",
+   "fieldtype": "Check",
+   "label": "Rasa OK",
+   "default": "1"
+  },
+  {
+   "fieldname": "sec_notes",
+   "fieldtype": "Section Break",
+   "label": "Catatan"
+  },
+  {
+   "fieldname": "findings",
+   "fieldtype": "Text",
+   "label": "Temuan"
+  },
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Small Text",
+   "label": "Rekomendasi"
+  }
+ ],
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Quality Check MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "production_plan"
+}

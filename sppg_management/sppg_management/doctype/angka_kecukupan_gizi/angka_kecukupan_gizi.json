@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "autoname": "AKG-.#####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sasaran_penerima",
+  "tipe_layanan",
+  "col_break_140584",
+  "pct_akg",
+  "sec_gizi",
+  "energi_kcal",
+  "protein_g",
+  "col_break_140584",
+  "lemak_g",
+  "karbohidrat_g",
+  "col_break_140584",
+  "serat_g",
+  "natrium_mg",
+  "col_break_140584",
+  "zat_besi_mg",
+  "kalsium_mg",
+  "sec_tol",
+  "tol_kurang_pct",
+  "tol_lebih_pct",
+  "col_break_140584",
+  "referensi",
+  "tahun"
+ ],
+ "fields": [
+  {
+   "fieldname": "sasaran_penerima",
+   "fieldtype": "Link",
+   "label": "Sasaran Penerima",
+   "reqd": 1,
+   "options": "Sasaran Penerima MBG",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "tipe_layanan",
+   "fieldtype": "Select",
+   "label": "Tipe Layanan",
+   "reqd": 1,
+   "in_list_view": 1,
+   "options": "Makan Pagi\nMakan Siang\nMakan Malam\nSnack"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pct_akg",
+   "fieldtype": "Float",
+   "label": "Persentase AKG (%)",
+   "reqd": 1,
+   "default": "30",
+   "description": "% dari Total AKG Harian (mis. 30% untuk makan siang)"
+  },
+  {
+   "fieldname": "sec_gizi",
+   "fieldtype": "Section Break",
+   "label": "Nilai Gizi Target"
+  },
+  {
+   "fieldname": "energi_kcal",
+   "fieldtype": "Float",
+   "label": "Energi (kkal)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "protein_g",
+   "fieldtype": "Float",
+   "label": "Protein (gr)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lemak_g",
+   "fieldtype": "Float",
+   "label": "Lemak (gr)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "karbohidrat_g",
+   "fieldtype": "Float",
+   "label": "Karbohidrat (gr)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "serat_g",
+   "fieldtype": "Float",
+   "label": "Serat (gr)"
+  },
+  {
+   "fieldname": "natrium_mg",
+   "fieldtype": "Float",
+   "label": "Natrium (mg)"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "zat_besi_mg",
+   "fieldtype": "Float",
+   "label": "Zat Besi (mg)"
+  },
+  {
+   "fieldname": "kalsium_mg",
+   "fieldtype": "Float",
+   "label": "Kalsium (mg)"
+  },
+  {
+   "fieldname": "sec_tol",
+   "fieldtype": "Section Break",
+   "label": "Toleransi"
+  },
+  {
+   "fieldname": "tol_kurang_pct",
+   "fieldtype": "Float",
+   "label": "Toleransi Kurang (%)",
+   "default": "10"
+  },
+  {
+   "fieldname": "tol_lebih_pct",
+   "fieldtype": "Float",
+   "label": "Toleransi Lebih (%)",
+   "default": "10"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "referensi",
+   "fieldtype": "Data",
+   "label": "Referensi",
+   "default": "DKBM 2019"
+  },
+  {
+   "fieldname": "tahun",
+   "fieldtype": "Int",
+   "label": "Tahun",
+   "default": "2025"
+  }
+ ],
+ "is_submittable": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Angka Kecukupan Gizi",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "sasaran_penerima"
+}

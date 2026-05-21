@@ -1,0 +1,246 @@
+{
+ "actions": [],
+ "autoname": "DLV-.YY.MM.-.####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pemorsian",
+  "delivery_date",
+  "col_break_140584",
+  "sppg_unit",
+  "workflow_state",
+  "sec_armada",
+  "driver",
+  "vehicle",
+  "col_break_140584",
+  "total_portion",
+  "planned_departure",
+  "sec_waktu",
+  "actual_departure",
+  "return_datetime",
+  "sec_rute",
+  "delivery_routes",
+  "sec_ref",
+  "pod_ref",
+  "issue_ref",
+  "col_break_140584",
+  "gps_link",
+  "sec_biaya",
+  "fuel_cost",
+  "transport_cost",
+  "sec_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "pemorsian",
+   "fieldtype": "Link",
+   "label": "Pemorsian",
+   "options": "Pemorsian MBG",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Tanggal Pengiriman",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sppg_unit",
+   "fieldtype": "Link",
+   "label": "SPPG Unit",
+   "options": "SPPG Unit"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Data",
+   "label": "Status Workflow",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sec_armada",
+   "fieldtype": "Section Break",
+   "label": "Armada"
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "reqd": 1,
+   "options": "Driver"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Kendaraan",
+   "reqd": 1,
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_portion",
+   "fieldtype": "Int",
+   "label": "Total Porsi Dikirim",
+   "reqd": 1
+  },
+  {
+   "fieldname": "planned_departure",
+   "fieldtype": "Time",
+   "label": "Jam Berangkat Plan"
+  },
+  {
+   "fieldname": "sec_waktu",
+   "fieldtype": "Section Break",
+   "label": "Waktu Aktual"
+  },
+  {
+   "fieldname": "actual_departure",
+   "fieldtype": "Datetime",
+   "label": "Berangkat Aktual"
+  },
+  {
+   "fieldname": "return_datetime",
+   "fieldtype": "Datetime",
+   "label": "Kembali"
+  },
+  {
+   "fieldname": "sec_rute",
+   "fieldtype": "Section Break",
+   "label": "Rute"
+  },
+  {
+   "fieldname": "delivery_routes",
+   "fieldtype": "Table",
+   "label": "Rute Pengiriman",
+   "options": "Route Delivery"
+  },
+  {
+   "fieldname": "sec_ref",
+   "fieldtype": "Section Break",
+   "label": "Referensi"
+  },
+  {
+   "fieldname": "pod_ref",
+   "fieldtype": "Link",
+   "label": "Proof of Delivery",
+   "options": "Proof of Delivery",
+   "read_only": 1
+  },
+  {
+   "fieldname": "issue_ref",
+   "fieldtype": "Link",
+   "label": "Delivery Issue",
+   "options": "Delivery Issue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gps_link",
+   "fieldtype": "Data",
+   "label": "GPS Track Link"
+  },
+  {
+   "fieldname": "sec_biaya",
+   "fieldtype": "Section Break",
+   "label": "Biaya Transport"
+  },
+  {
+   "fieldname": "fuel_cost",
+   "fieldtype": "Currency",
+   "label": "Biaya BBM"
+  },
+  {
+   "fieldname": "transport_cost",
+   "fieldtype": "Currency",
+   "label": "Biaya Transport Total"
+  },
+  {
+   "fieldname": "sec_notes",
+   "fieldtype": "Section Break",
+   "label": "Catatan"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Delivery Plan MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "pemorsian"
+}

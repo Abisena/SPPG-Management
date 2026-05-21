@@ -1,0 +1,250 @@
+{
+ "actions": [],
+ "autoname": "CPP-.YY.MM.-.####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "menu_plan",
+  "period",
+  "col_break_140584",
+  "sppg_unit",
+  "total_portion",
+  "sec_biaya",
+  "material_cost",
+  "packaging_cost",
+  "col_break_140584",
+  "energy_cost",
+  "transport_cost",
+  "col_break_140584",
+  "labor_cost",
+  "waste_cost",
+  "col_break_140584",
+  "overhead_cost",
+  "sec_hasil",
+  "total_cost",
+  "planned_cost_per_portion",
+  "col_break_140584",
+  "actual_cost_per_portion",
+  "hpp_variance",
+  "col_break_140584",
+  "selling_price",
+  "gross_margin",
+  "col_break_140584",
+  "margin_pct"
+ ],
+ "fields": [
+  {
+   "fieldname": "menu_plan",
+   "fieldtype": "Link",
+   "label": "Menu Plan",
+   "reqd": 1,
+   "options": "Menu Plan MBG",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Date",
+   "label": "Periode",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sppg_unit",
+   "fieldtype": "Link",
+   "label": "SPPG Unit",
+   "options": "SPPG Unit"
+  },
+  {
+   "fieldname": "total_portion",
+   "fieldtype": "Int",
+   "label": "Total Porsi Aktual",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec_biaya",
+   "fieldtype": "Section Break",
+   "label": "Komponen Biaya"
+  },
+  {
+   "fieldname": "material_cost",
+   "fieldtype": "Currency",
+   "label": "Biaya Bahan Baku",
+   "reqd": 1
+  },
+  {
+   "fieldname": "packaging_cost",
+   "fieldtype": "Currency",
+   "label": "Biaya Packaging",
+   "default": "0"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "energy_cost",
+   "fieldtype": "Currency",
+   "label": "Biaya Gas/Energi",
+   "default": "0"
+  },
+  {
+   "fieldname": "transport_cost",
+   "fieldtype": "Currency",
+   "label": "Biaya Transport",
+   "default": "0"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "labor_cost",
+   "fieldtype": "Currency",
+   "label": "Biaya Tenaga Kerja",
+   "default": "0"
+  },
+  {
+   "fieldname": "waste_cost",
+   "fieldtype": "Currency",
+   "label": "Biaya Waste",
+   "default": "0"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overhead_cost",
+   "fieldtype": "Currency",
+   "label": "Overhead",
+   "default": "0"
+  },
+  {
+   "fieldname": "sec_hasil",
+   "fieldtype": "Section Break",
+   "label": "Hasil Kalkulasi"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Biaya",
+   "read_only": 1
+  },
+  {
+   "fieldname": "planned_cost_per_portion",
+   "fieldtype": "Currency",
+   "label": "HPP Plan/Porsi"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_cost_per_portion",
+   "fieldtype": "Currency",
+   "label": "HPP Aktual/Porsi",
+   "read_only": 1
+  },
+  {
+   "fieldname": "hpp_variance",
+   "fieldtype": "Currency",
+   "label": "Variance HPP",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "selling_price",
+   "fieldtype": "Currency",
+   "label": "Harga Jual/Porsi"
+  },
+  {
+   "fieldname": "gross_margin",
+   "fieldtype": "Currency",
+   "label": "Gross Margin",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "margin_pct",
+   "fieldtype": "Percent",
+   "label": "Margin %",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Cost Per Portion MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "menu_plan"
+}

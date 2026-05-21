@@ -1,0 +1,212 @@
+{
+ "actions": [],
+ "autoname": "PRD-.YY.MM.-.####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "menu_plan",
+  "production_date",
+  "col_break_140584",
+  "sppg_unit",
+  "head_chef",
+  "col_break_140584",
+  "cooking_shift",
+  "workflow_state",
+  "sec_qty",
+  "target_portion",
+  "actual_portion",
+  "col_break_140584",
+  "start_datetime",
+  "finish_datetime",
+  "sec_qc",
+  "qc_status",
+  "qc_notes",
+  "sec_ref",
+  "stock_entry",
+  "pemorsian_ref"
+ ],
+ "fields": [
+  {
+   "fieldname": "menu_plan",
+   "fieldtype": "Link",
+   "label": "Menu Plan",
+   "reqd": 1,
+   "options": "Menu Plan MBG",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "production_date",
+   "fieldtype": "Date",
+   "label": "Tanggal Produksi",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sppg_unit",
+   "fieldtype": "Link",
+   "label": "SPPG Unit",
+   "options": "SPPG Unit"
+  },
+  {
+   "fieldname": "head_chef",
+   "fieldtype": "Link",
+   "label": "Kepala Dapur",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cooking_shift",
+   "fieldtype": "Select",
+   "label": "Shift Masak",
+   "reqd": 1,
+   "options": "Shift 1 (03.00-07.00)\nShift 2 (07.00-11.00)\nShift 3 (11.00-15.00)"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Data",
+   "label": "Status Workflow",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sec_qty",
+   "fieldtype": "Section Break",
+   "label": "Kuantitas"
+  },
+  {
+   "fieldname": "target_portion",
+   "fieldtype": "Int",
+   "label": "Target Porsi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "actual_portion",
+   "fieldtype": "Int",
+   "label": "Actual Porsi",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_datetime",
+   "fieldtype": "Datetime",
+   "label": "Mulai Produksi"
+  },
+  {
+   "fieldname": "finish_datetime",
+   "fieldtype": "Datetime",
+   "label": "Selesai Produksi"
+  },
+  {
+   "fieldname": "sec_qc",
+   "fieldtype": "Section Break",
+   "label": "QC"
+  },
+  {
+   "fieldname": "qc_status",
+   "fieldtype": "Select",
+   "label": "QC Status",
+   "read_only": 1,
+   "options": "\nMenunggu QC\nPassed\nFailed\nConditional"
+  },
+  {
+   "fieldname": "qc_notes",
+   "fieldtype": "Small Text",
+   "label": "QC Notes"
+  },
+  {
+   "fieldname": "sec_ref",
+   "fieldtype": "Section Break",
+   "label": "Referensi"
+  },
+  {
+   "fieldname": "stock_entry",
+   "fieldtype": "Link",
+   "label": "Stock Entry (Bahan)",
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pemorsian_ref",
+   "fieldtype": "Link",
+   "label": "Pemorsian Ref",
+   "options": "Pemorsian MBG",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Production Plan MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "menu_plan"
+}

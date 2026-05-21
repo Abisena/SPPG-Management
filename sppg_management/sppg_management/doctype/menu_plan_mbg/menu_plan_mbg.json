@@ -1,0 +1,270 @@
+{
+ "actions": [],
+ "autoname": "MNU-.YY.MM.-.####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_date",
+  "sppg_unit",
+  "col_break_140584",
+  "kontrak",
+  "konsumen",
+  "col_break_140584",
+  "master_menu",
+  "workflow_state",
+  "sec_porsi",
+  "total_portion_plan",
+  "total_portion_actual",
+  "col_break_140584",
+  "portion_variance",
+  "stock_status",
+  "sec_biaya",
+  "estimated_material_cost",
+  "estimated_cost_per_portion",
+  "col_break_140584",
+  "price_per_portion",
+  "sec_detail",
+  "menu_plan_details",
+  "sec_ref",
+  "stock_forecast",
+  "production_plan",
+  "col_break_140584",
+  "warehouse",
+  "sec_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_date",
+   "fieldtype": "Date",
+   "label": "Tanggal Layanan",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sppg_unit",
+   "fieldtype": "Link",
+   "label": "SPPG Unit",
+   "reqd": 1,
+   "options": "SPPG Unit"
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kontrak",
+   "fieldtype": "Link",
+   "label": "Kontrak",
+   "reqd": 1,
+   "options": "Kontrak Penyediaan MBG"
+  },
+  {
+   "fieldname": "konsumen",
+   "fieldtype": "Link",
+   "label": "Konsumen MBG",
+   "options": "Konsumen MBG",
+   "fetch_from": "kontrak.konsumen",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "master_menu",
+   "fieldtype": "Link",
+   "label": "Master Menu",
+   "reqd": 1,
+   "options": "Master Menu MBG"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Data",
+   "label": "Status Workflow",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sec_porsi",
+   "fieldtype": "Section Break",
+   "label": "Porsi"
+  },
+  {
+   "fieldname": "total_portion_plan",
+   "fieldtype": "Int",
+   "label": "Total Porsi Plan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_portion_actual",
+   "fieldtype": "Int",
+   "label": "Total Porsi Aktual",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "portion_variance",
+   "fieldtype": "Int",
+   "label": "Variance Porsi",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stock_status",
+   "fieldtype": "Select",
+   "label": "Status Stok",
+   "read_only": 1,
+   "in_list_view": 1,
+   "options": "\nBelum Dicek\nStock Available\nStock Shortage",
+   "default": "Belum Dicek"
+  },
+  {
+   "fieldname": "sec_biaya",
+   "fieldtype": "Section Break",
+   "label": "Biaya Estimasi"
+  },
+  {
+   "fieldname": "estimated_material_cost",
+   "fieldtype": "Currency",
+   "label": "Est. Biaya Bahan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "estimated_cost_per_portion",
+   "fieldtype": "Currency",
+   "label": "Est. Cost/Porsi",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price_per_portion",
+   "fieldtype": "Currency",
+   "label": "Harga Jual/Porsi",
+   "fetch_from": "kontrak.price_per_portion",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_detail",
+   "fieldtype": "Section Break",
+   "label": "Detail Kebutuhan Bahan"
+  },
+  {
+   "fieldname": "menu_plan_details",
+   "fieldtype": "Table",
+   "label": "Detail Bahan",
+   "options": "Detail Menu Plan"
+  },
+  {
+   "fieldname": "sec_ref",
+   "fieldtype": "Section Break",
+   "label": "Referensi"
+  },
+  {
+   "fieldname": "stock_forecast",
+   "fieldtype": "Link",
+   "label": "Stock Forecast",
+   "options": "Stock Forecast MBG",
+   "read_only": 1
+  },
+  {
+   "fieldname": "production_plan",
+   "fieldtype": "Link",
+   "label": "Production Plan",
+   "options": "Production Plan MBG",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "sec_notes",
+   "fieldtype": "Section Break",
+   "label": "Catatan"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  }
+ ],
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Menu Plan MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "konsumen"
+}

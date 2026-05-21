@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "autoname": "POR-.YY.MM.-.####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "production_plan",
+  "menu_plan",
+  "col_break_140584",
+  "portioning_date",
+  "workflow_state",
+  "sec_porsi",
+  "target_portion",
+  "actual_portion",
+  "col_break_140584",
+  "defect_portion",
+  "portion_variance",
+  "col_break_140584",
+  "portioning_pic",
+  "finish_datetime",
+  "sec_detail",
+  "portioning_details",
+  "sec_ref",
+  "delivery_plan",
+  "sec_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "production_plan",
+   "fieldtype": "Link",
+   "label": "Production Plan",
+   "reqd": 1,
+   "options": "Production Plan MBG",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "menu_plan",
+   "fieldtype": "Link",
+   "label": "Menu Plan",
+   "options": "Menu Plan MBG",
+   "fetch_from": "production_plan.menu_plan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "portioning_date",
+   "fieldtype": "Date",
+   "label": "Tanggal Pemorsian",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Data",
+   "label": "Status Workflow",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sec_porsi",
+   "fieldtype": "Section Break",
+   "label": "Porsi"
+  },
+  {
+   "fieldname": "target_portion",
+   "fieldtype": "Int",
+   "label": "Target Porsi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "actual_portion",
+   "fieldtype": "Int",
+   "label": "Actual Porsi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "defect_portion",
+   "fieldtype": "Int",
+   "label": "Porsi Rusak",
+   "default": "0"
+  },
+  {
+   "fieldname": "portion_variance",
+   "fieldtype": "Int",
+   "label": "Variance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "portioning_pic",
+   "fieldtype": "Link",
+   "label": "PIC Pemorsian",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "finish_datetime",
+   "fieldtype": "Datetime",
+   "label": "Waktu Selesai"
+  },
+  {
+   "fieldname": "sec_detail",
+   "fieldtype": "Section Break",
+   "label": "Detail Pemorsian"
+  },
+  {
+   "fieldname": "portioning_details",
+   "fieldtype": "Table",
+   "label": "Detail per Sasaran",
+   "options": "Detail Pemorsian"
+  },
+  {
+   "fieldname": "sec_ref",
+   "fieldtype": "Section Break",
+   "label": "Referensi"
+  },
+  {
+   "fieldname": "delivery_plan",
+   "fieldtype": "Link",
+   "label": "Delivery Plan",
+   "options": "Delivery Plan MBG",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_notes",
+   "fieldtype": "Section Break",
+   "label": "Catatan"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Catatan"
+  }
+ ],
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Pemorsian MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "production_plan"
+}

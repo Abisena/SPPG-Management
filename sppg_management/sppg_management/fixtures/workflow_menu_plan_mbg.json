@@ -1,0 +1,92 @@
+{
+ "name": "SPPG Menu Plan MBG Workflow",
+ "doctype": "Workflow",
+ "document_type": "Menu Plan MBG",
+ "workflow_name": "SPPG Menu Plan MBG Workflow",
+ "is_active": 1,
+ "send_email_alert": 0,
+ "states": [
+  {
+   "state": "Draft",
+   "doc_status": "0",
+   "style": "Primary",
+   "is_optional_state": 0,
+   "allow_edit": "Admin SPPG"
+  },
+  {
+   "state": "Sudah Dikonfirmasi",
+   "doc_status": "0",
+   "style": "Info",
+   "is_optional_state": 0,
+   "allow_edit": "SPPG Manager"
+  },
+  {
+   "state": "Produksi",
+   "doc_status": "0",
+   "style": "Warning",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Pemorsian",
+   "doc_status": "0",
+   "style": "Warning",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Pengiriman",
+   "doc_status": "0",
+   "style": "Warning",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Selesai",
+   "doc_status": "0",
+   "style": "Success",
+   "is_optional_state": 0
+  },
+  {
+   "state": "Dibatalkan",
+   "doc_status": "0",
+   "style": "Danger",
+   "is_optional_state": 0
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Draft",
+   "action": "Konfirmasi",
+   "next_state": "Sudah Dikonfirmasi",
+   "allowed": "SPPG Manager"
+  },
+  {
+   "state": "Draft",
+   "action": "Batalkan",
+   "next_state": "Dibatalkan",
+   "allowed": "SPPG Manager"
+  },
+  {
+   "state": "Sudah Dikonfirmasi",
+   "action": "Mulai Produksi",
+   "next_state": "Produksi",
+   "allowed": "Kepala Dapur"
+  },
+  {
+   "state": "Produksi",
+   "action": "Selesai Masak",
+   "next_state": "Pemorsian",
+   "allowed": "Kepala Dapur"
+  },
+  {
+   "state": "Pemorsian",
+   "action": "Mulai Kirim",
+   "next_state": "Pengiriman",
+   "allowed": "Driver Logistik"
+  },
+  {
+   "state": "Pengiriman",
+   "action": "Selesai",
+   "next_state": "Selesai",
+   "allowed": "Driver Logistik"
+  }
+ ]
+}

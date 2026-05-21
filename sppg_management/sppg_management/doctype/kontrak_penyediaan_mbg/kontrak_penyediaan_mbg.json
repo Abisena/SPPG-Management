@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "autoname": "KMBG-.YY.MM.-.####",
+ "creation": "2025-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contract_number",
+  "konsumen",
+  "col_break_140584",
+  "sppg_unit",
+  "workflow_state",
+  "sec_periode",
+  "start_date",
+  "end_date",
+  "col_break_140584",
+  "service_type",
+  "service_days_per_week",
+  "sec_nilai",
+  "price_per_portion",
+  "total_daily_portion",
+  "col_break_140584",
+  "contract_value",
+  "sasaran_penerima",
+  "sec_penerima",
+  "penerima_details",
+  "sec_jadwal",
+  "jadwal_layanan",
+  "sec_erp",
+  "sales_order",
+  "sec_notes",
+  "notes",
+  "cancel_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract_number",
+   "fieldtype": "Data",
+   "label": "Nomor Kontrak",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "konsumen",
+   "fieldtype": "Link",
+   "label": "Konsumen MBG",
+   "reqd": 1,
+   "options": "Konsumen MBG",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sppg_unit",
+   "fieldtype": "Link",
+   "label": "SPPG Unit",
+   "reqd": 1,
+   "options": "SPPG Unit"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Data",
+   "label": "Status Workflow",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sec_periode",
+   "fieldtype": "Section Break",
+   "label": "Periode Kontrak"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Tanggal Mulai",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "Tanggal Berakhir",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "label": "Tipe Layanan",
+   "reqd": 1,
+   "options": "Makan Siang\nMakan Pagi\nMakan Siang + Snack\nMakan Pagi + Siang"
+  },
+  {
+   "fieldname": "service_days_per_week",
+   "fieldtype": "Int",
+   "label": "Hari Layanan/Minggu",
+   "reqd": 1,
+   "default": "5"
+  },
+  {
+   "fieldname": "sec_nilai",
+   "fieldtype": "Section Break",
+   "label": "Nilai Kontrak"
+  },
+  {
+   "fieldname": "price_per_portion",
+   "fieldtype": "Currency",
+   "label": "Harga Per Porsi (Rp)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_daily_portion",
+   "fieldtype": "Int",
+   "label": "Total Porsi/Hari",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_140584",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract_value",
+   "fieldtype": "Currency",
+   "label": "Nilai Kontrak Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sasaran_penerima",
+   "fieldtype": "Link",
+   "label": "Sasaran Utama",
+   "options": "Sasaran Penerima MBG"
+  },
+  {
+   "fieldname": "sec_penerima",
+   "fieldtype": "Section Break",
+   "label": "Penerima Manfaat"
+  },
+  {
+   "fieldname": "penerima_details",
+   "fieldtype": "Table",
+   "label": "Detail Penerima",
+   "options": "Detail Penerima Manfaat"
+  },
+  {
+   "fieldname": "sec_jadwal",
+   "fieldtype": "Section Break",
+   "label": "Jadwal Layanan"
+  },
+  {
+   "fieldname": "jadwal_layanan",
+   "fieldtype": "Table",
+   "label": "Jadwal",
+   "options": "Detail Jadwal Layanan MBG"
+  },
+  {
+   "fieldname": "sec_erp",
+   "fieldtype": "Section Break",
+   "label": "Integrasi ERPNext"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_notes",
+   "fieldtype": "Section Break",
+   "label": "Catatan Khusus"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Catatan"
+  },
+  {
+   "fieldname": "cancel_reason",
+   "fieldtype": "Small Text",
+   "label": "Alasan Pembatalan"
+  }
+ ],
+ "is_submittable": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2025-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SPPG Management",
+ "name": "Kontrak Penyediaan MBG",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "SPPG Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  },
+  {
+   "role": "Admin SPPG",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "naming_rule": "Expression (old style)",
+ "title_field": "konsumen"
+}
